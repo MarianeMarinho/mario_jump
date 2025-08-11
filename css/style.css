@@ -13,16 +13,15 @@
   background-color: #69c3daf6;
 }
 
-.canos {
+.pipes {
   position: absolute;
   bottom: 0;
   width: 80px;
-  left: 120px;
-  /*animation: pipe-animation 2s infinite linear;*/
+  animation: pipe-animation 1.5s infinite linear;
 }
 .mario {
   width: 150px;
-  bottom: 0;
+  bottom: 0px;
   position: absolute;
 }
 .jump {
