@@ -1,68 +1,82 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
 .game-board {
-  width: 100%;
-  height: 500px;
-  border-bottom: 15px solid #48e242;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-
-  background: linear-gradient(#69c3daf6, #a6d7e4f6);
+   width: 100%;
+   height: 550px;
+   border-bottom: 15px solid #48e242;
+   margin: 0 auto;
+   position: relative;
+   overflow: hidden;
+   background: linear-gradient(#69c3daf6, #a6d7e4f6);
 }
-
+.score {
+   display: flex;
+   align-items: center;
+   justify-content: left;
+   width: 400px;
+}
+.score-texto {
+   font-size: 36px;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 900;
+   color: #000000;
+   margin-left: 10px;
+}
+.score-img {
+   margin-left: 15px;
+}
 .pipes {
-  position: absolute;
-  bottom: 0;
-  width: 80px;
-  animation: pipe-animation 1.5s infinite linear;
+   position: absolute;
+   bottom: 0;
+   width: 80px;
+   animation: pipe-animation 1.5s infinite linear;
 }
 .mario {
-  width: 150px;
-  bottom: 0px;
-  position: absolute;
+   width: 150px;
+   bottom: 0px;
+   position: absolute;
 }
 .jump {
-  animation: mario-animation 500ms ease-in-out;
+   animation: mario-animation 500ms ease-in-out;
 }
 .clouds {
-  width: 550px;
-  position: absolute;
-  animation: clouds-animation 20s infinite linear;
+   width: 550px;
+   position: absolute;
+   animation: clouds-animation 20s infinite linear;
 }
 @keyframes pipe-animation {
-  from {
-    right: -80px;
-  }
-  to {
-    right: 100%;
-  }
+   from {
+      right: -80px;
+   }
+   to {
+      right: 100%;
+   }
 }
 @keyframes mario-animation {
-  0% {
-    bottom: 0;
-  }
-  40% {
-    bottom: 180px;
-  }
-  50% {
-    bottom: 180px;
-  }
-  60% {
-    bottom: 180px;
-  }
-  100% {
-    bottom: 0;
-  }
+   0% {
+      bottom: 0;
+   }
+   40% {
+      bottom: 180px;
+   }
+   50% {
+      bottom: 180px;
+   }
+   60% {
+      bottom: 180px;
+   }
+   100% {
+      bottom: 0;
+   }
 }
 @keyframes clouds-animation {
-  from {
-    right: -550px;
-  }
-  to {
-    right: 100%;
-  }
+   from {
+      right: -550px;
+   }
+   to {
+      right: 100%;
+   }
 }
