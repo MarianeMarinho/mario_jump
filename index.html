@@ -6,7 +6,11 @@
       <link rel="stylesheet" href="/css/style.css" />
       <title>Mario Jump</title>
    </head>
-   <body>
+   <body class="main-content">
+      <div class="game-over-overlay" style="display: none">
+         <img src="./imgs/overlaygameover.png" class="game-over-overlay-img" />
+         <button id="restart-btn">Restart</button>
+      </div>
       <div class="game-board">
          <img src="./imgs/clouds.png" class="clouds" />
          <img src="./imgs/mario.gif" class="mario" />

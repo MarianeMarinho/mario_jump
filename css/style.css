@@ -12,6 +12,36 @@
    overflow: hidden;
    background: linear-gradient(#69c3daf6, #a6d7e4f6);
 }
+
+.game-over-overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background: rgba(0, 0, 0, 0.8);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 10; /* acima dos outros elementos */
+   color: white;
+}
+
+.game-over-overlay img {
+   width: 700px;
+   margin-bottom: 20px;
+}
+
+#restart-btn {
+   padding: 20px 50px;
+   font-size: 24px;
+   border-radius: 14px;
+   cursor: pointer;
+   background-color: #f8620a;
+   border: 2px solid #48e242;
+}
+
 .score {
    display: flex;
    align-items: center;
