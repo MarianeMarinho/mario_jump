@@ -9,7 +9,11 @@
    <body class="main-content">
       <div class="game-over-overlay" style="display: none">
          <img src="./imgs/overlaygameover.png" class="game-over-overlay-img" />
-         <button id="restart-btn">Restart</button>
+         <div ontouchstart="">
+            <div class="button">
+               <a href="#">Restart</a>
+            </div>
+         </div>
       </div>
       <div class="game-board">
          <img src="./imgs/clouds.png" class="clouds" />
@@ -20,6 +24,7 @@
             <h2 class="score-texto"><span class="score-num"> 0</span></h2>
          </div>
       </div>
+      <div class="tijolos"></div>
 
       <script src="./js/script.js"></script>
    </body>

@@ -3,7 +3,7 @@ const pipes = document.querySelector(".pipes");
 const clouds = document.querySelector(".clouds");
 const gameBoard = document.querySelector(".game-board");
 const gameOverOverlay = document.querySelector(".game-over-overlay");
-const restartBtn = document.getElementById("restart-btn");
+const restartBtn = document.querySelector(".button");
 
 const jump = () => {
    mario.classList.add("jump");
@@ -44,6 +44,7 @@ const loop = setInterval(() => {
       clouds.style.animation = "none";
       clouds.style.right = `${cloudsPosition}px`;
       gameOverOverlay.style.display = "flex";
+      clearInterval(loop);
    }
 }, 10);
 

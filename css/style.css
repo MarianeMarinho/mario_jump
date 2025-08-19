@@ -3,9 +3,10 @@
    padding: 0;
    box-sizing: border-box;
 }
+
 .game-board {
    width: 100%;
-   height: 550px;
+   height: 750px;
    border-bottom: 15px solid #48e242;
    margin: 0 auto;
    position: relative;
@@ -24,24 +25,77 @@
    flex-direction: column;
    justify-content: center;
    align-items: center;
-   z-index: 10; /* acima dos outros elementos */
+   z-index: 10;
    color: white;
 }
 
 .game-over-overlay img {
    width: 700px;
-   margin-bottom: 20px;
+}
+.tijolos {
+   width: 100%;
+   height: 200px; /* altura da faixa de tijolos */
+   background-image: url("../imgs/tijolos.avif");
+   background-repeat: repeat-x; /* repete na horizontal */
+   background-size: auto 200px; /* mantém a proporção da img e ajusta altura */
 }
 
-#restart-btn {
-   padding: 20px 50px;
+.button {
+   position: relative;
+   display: inline-block;
+   margin: 20px;
+}
+
+.button a {
+   color: rgb(0, 0, 0);
+   font-family: Helvetica, sans-serif;
+   font-weight: bold;
+   text-transform: uppercase;
+
    font-size: 24px;
-   border-radius: 14px;
-   cursor: pointer;
-   background-color: #f8620a;
-   border: 2px solid #48e242;
+   text-align: center;
+   text-decoration: none;
+   background-color: #49e20d;
+   display: block;
+   position: relative;
+   padding: 20px 40px;
+
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+   text-shadow: 0px 1px 0px #000;
+   filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+   -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #7b9100;
+   -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #7b9100;
+   box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #7b9100;
+
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
 }
 
+.button a:active {
+   top: 10px;
+   background-color: #63f700;
+
+   -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #7b9100;
+   -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #7b9100;
+   box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #7b9100;
+}
+
+.button:after {
+   content: "";
+   height: 100%;
+   width: 100%;
+   padding: 4px;
+   position: absolute;
+   bottom: -15px;
+   left: -4px;
+   z-index: -1;
+   background-color: #222b00;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+}
 .score {
    display: flex;
    align-items: center;
